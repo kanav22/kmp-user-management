@@ -1,0 +1,21 @@
+CREATE TABLE UserEntity (
+    id        INTEGER NOT NULL PRIMARY KEY,
+    name      TEXT    NOT NULL,
+    email     TEXT    NOT NULL,
+    gender    TEXT    NOT NULL,
+    status    TEXT    NOT NULL,
+    addedAt   TEXT    NOT NULL
+);
+
+selectAllOrderedByAddedAt:
+SELECT * FROM UserEntity ORDER BY addedAt DESC;
+
+insertOrIgnore:
+INSERT OR IGNORE INTO UserEntity(id, name, email, gender, status, addedAt)
+VALUES (?, ?, ?, ?, ?, ?);
+
+deleteById:
+DELETE FROM UserEntity WHERE id = ?;
+
+selectById:
+SELECT * FROM UserEntity WHERE id = ?;
