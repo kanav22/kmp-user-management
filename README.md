@@ -4,6 +4,43 @@ A production-quality Kotlin Multiplatform (Android + iOS) User Management app bu
 
 ---
 
+## Build & Run
+
+### Prerequisites
+
+| Tool | Version |
+|---|---|
+| Android Studio | Hedgehog or newer |
+| Xcode | 15+ |
+| JDK | 17+ |
+| Kotlin | 2.1.21 (via Gradle toolchain) |
+
+### Android
+
+1. Clone the repo and open the root folder in Android Studio.
+2. Add your GoRest token to `local.properties` (see **Token Setup** below).
+3. Select the `composeApp` run configuration and run on an emulator or device (API 26+).
+
+```bash
+./gradlew :composeApp:assembleDebug        # build APK
+./gradlew :composeApp:installDebug         # install on connected device/emulator
+```
+
+### iOS
+
+1. Add your token to `composeApp/src/iosMain/kotlin/com/sliide/usermanager/config/Secrets.ios.kt` (see **Token Setup** below).
+2. Open `iosApp/iosApp.xcodeproj` in Xcode.
+3. Select an iPhone simulator and press **Run**. Xcode will invoke Gradle automatically to build the shared framework.
+
+### Tests
+
+```bash
+./gradlew :composeApp:testDebugUnitTest    # Android unit tests (ViewModel, Repository)
+./gradlew :composeApp:jvmTest             # JVM tests (SQLDelight INSERT OR IGNORE integration)
+```
+
+---
+
 ## Token Setup
 
 **Must be done before building.**
@@ -259,15 +296,20 @@ Adaptive behaviour (single-pane portrait, dual-pane landscape/tablet) is the req
 
 ### Android
 
-| User List | Add User | Delete + Undo |
-| --------- | -------- | ------------- |
+| User List (Portrait) | Add User | Delete + Undo |
+| -------------------- | -------- | ------------- |
 | <img src="docs/screenshots/android_portrait.png" width="220" alt="Android user list"> | <img src="docs/screenshots/android_add_user.png" width="220" alt="Add user bottom sheet"> | <img src="docs/screenshots/android_undo.png" width="220" alt="Delete with undo snackbar"> |
+
+**Landscape — Adaptive Layout (List + Detail)**
+
+<img src="docs/screenshots/android_landscape.png" width="680" alt="Landscape adaptive layout showing list and detail pane side by side">
 
 ### iOS
 
 | User List |
 | --------- |
 | <img src="docs/screenshots/ios_portrait.png" width="220" alt="iOS user list"> |
+
 
 ---
 
