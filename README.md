@@ -257,19 +257,17 @@ Adaptive behaviour (single-pane portrait, dual-pane landscape/tablet) is the req
 
 ## Screenshots
 
+### Android
 
-| Portrait — User List | Landscape — Adaptive | Add User Flow |
-| -------------------- | -------------------- | ------------- |
-| portrait             | landscape            | add           |
+| User List | Add User | Delete + Undo |
+| --------- | -------- | ------------- |
+| <img src="docs/screenshots/android_portrait.png" width="220" alt="Android user list"> | <img src="docs/screenshots/android_add_user.png" width="220" alt="Add user bottom sheet"> | <img src="docs/screenshots/android_undo.png" width="220" alt="Delete with undo snackbar"> |
 
+### iOS
 
-
-| Delete + Undo | Offline Error | Dark Mode |
-| ------------- | ------------- | --------- |
-| delete        | offline       | dark      |
-
-
-> **To add screenshots**: run the app, capture with `⌘⇧4` (macOS) or Android Emulator screenshot tool, save to `docs/screenshots/` using the filenames above.
+| User List |
+| --------- |
+| <img src="docs/screenshots/ios_portrait.png" width="220" alt="iOS user list"> |
 
 ---
 
