@@ -1,6 +1,9 @@
-# Sliide KMP User Management App
+# KMP User Management
 
-A production-quality Kotlin Multiplatform (Android + iOS) User Management app built for the Sliide UX Innovator Challenge.
+[![CI](https://github.com/kanav22/sliide-kmp-user-management/actions/workflows/ci.yml/badge.svg)](https://github.com/kanav22/sliide-kmp-user-management/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+A production-quality Kotlin Multiplatform (Android + iOS) user management reference app — Compose Multiplatform, MVI, offline-first data, and CI-driven quality gates.
 
 ---
 
