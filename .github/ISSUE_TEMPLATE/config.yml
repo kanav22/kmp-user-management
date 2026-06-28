@@ -1,0 +1,9 @@
+name: config.yml
+blank_issues_enabled: false
+contact_links:
+  - name: Architecture documentation
+    url: https://github.com/kanav22/kmp-user-management/blob/main/docs/architecture/kmp-mvi-offline-first.md
+    about: Read the MVI + offline-first architecture guide before opening issues
+  - name: Author profile
+    url: https://github.com/kanav22
+    about: More projects and contact info
