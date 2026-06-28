@@ -1,0 +1,14 @@
+.gradle
+.kotlin/
+build/
+.idea/
+*.iml
+.DS_Store
+local.properties
+**/Secrets.*.kt
+/captures
+.externalNativeBuild
+.cxx
+*.orig
+xcuserdata/
+*.xcworkspace/xcuserdata/
