@@ -1,6 +1,6 @@
 # Sliide KMP User Management
 
-[![CI](https://github.com/kanav22/sliide-kmp-user-management/actions/workflows/ci.yml/badge.svg)](https://github.com/kanav22/sliide-kmp-user-management/actions/workflows/ci.yml)
+[![CI](https://github.com/kanav22/kmp-user-management/actions/workflows/ci.yml/badge.svg)](https://github.com/kanav22/kmp-user-management/actions/workflows/ci.yml)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.3-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-1.8+-4285F4?logo=jetpackcompose&logoColor=white)](https://www.jetbrains.com/compose-multiplatform/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -101,8 +101,8 @@ flowchart TB
 ### Run
 
 ```bash
-git clone https://github.com/kanav22/sliide-kmp-user-management.git
-cd sliide-kmp-user-management
+git clone https://github.com/kanav22/kmp-user-management.git
+cd kmp-user-management
 
 # Android
 ./gradlew :composeApp:assembleDebug
