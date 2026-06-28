@@ -1,49 +1,41 @@
 # Contributing
 
-Thanks for your interest in this project. Contributions are welcome — issues, documentation improvements, and pull requests.
+Thanks for your interest in this project. This repo is a reference implementation for production KMP architecture — contributions that improve clarity, test coverage, or platform support are welcome.
 
 ## Getting started
 
-1. Fork the repository and clone your fork.
-2. Follow [README.md](README.md) for prerequisites and token setup.
-3. Create a branch from `main`:
-
-   ```bash
-   git checkout -b feature/your-change
-   ```
-
-## Development workflow
+1. Fork the repo and clone your fork
+2. Ensure JDK 17+ is installed
+3. Run tests before making changes:
 
 ```bash
-./gradlew :composeApp:jvmTest              # shared/JVM tests
-./gradlew :composeApp:testDebugUnitTest    # Android unit tests
-./gradlew :composeApp:assembleDebug        # debug build
+./gradlew :composeApp:allTests
 ```
 
-CI runs the same checks on every pull request.
+## Code conventions
 
-## Pull request guidelines
+- Follow existing **MVI** patterns: `State`, `Intent`, `Effect`, and `ViewModel` boundaries stay explicit
+- Keep **offline-first** semantics: reads from local cache, network syncs asynchronously
+- Shared code lives in `commonMain`; platform-specific code only in `*Main` source sets
+- Match existing naming and package structure under `com.kanav.usermanager`
 
-- Keep changes focused and explain the **why** in the PR description.
-- Include tests when changing behavior.
-- Update README/docs when setup or architecture changes.
-- Ensure `./gradlew :composeApp:jvmTest :composeApp:testDebugUnitTest` passes locally.
+## Pull requests
 
-## Code style
+1. Open an issue first for large changes (new features, architecture shifts)
+2. Keep PRs focused — one concern per PR
+3. Ensure CI passes (GitHub Actions runs on every push)
+4. Update docs if you change behavior or architecture
 
-- Follow existing Kotlin and Compose conventions in the codebase.
-- Prefer unidirectional data flow (MVI) for new UI state.
-- Keep platform-specific code in `androidMain` / `iosMain`; share logic in `commonMain`.
+## Reporting bugs
 
-## Reporting issues
+Use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.yml) and include:
 
-When filing a bug, include:
-
+- Platform (Android / iOS / Desktop)
 - Steps to reproduce
 - Expected vs actual behavior
-- Android/iOS version and device or simulator
-- Relevant logs or screenshots
 
-## License
+## Questions
 
-By contributing, you agree that your contributions will be licensed under the [MIT License](LICENSE).
+For architecture questions, read [docs/architecture/kmp-mvi-offline-first.md](docs/architecture/kmp-mvi-offline-first.md) first.
+
+For other inquiries, open a [GitHub issue](https://github.com/kanav22/sliide-kmp-user-management/issues) or reach out via [kanavwadhawan.com](https://www.kanavwadhawan.com).
